@@ -19,6 +19,8 @@ C# development experience, basic knowledge about reverse engineering
 ## Game .dll
 
 Most .dll you would need located in game subfolder. Locate your game using Steam:
+![Game path in Steam](https://github.com/O-n-y/OxygenNotIncludedModTemplate/blob/main/oxy-mod-1.png)
+
 
 You path would look something like:
 `E:\Steam\steamapps\common\OxygenNotIncluded`
