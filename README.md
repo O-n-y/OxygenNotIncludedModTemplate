@@ -14,6 +14,10 @@ C# development experience, basic knowledge about reverse engineering
 
 
 # Project references
+
+
+## Game .dll
+
 Most .dll you would need located in game subfolder. Locate your game using Steam:
 
 You path would look something like:
@@ -21,4 +25,12 @@ You path would look something like:
 Move 2 steps down into subfolder:
 `E:\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed`
 all .dll we need located in **Managed** subfolder.
+
+## Il Merge
+
+If you planning to add some external .dll to your projects, for example using one core library for all your mods, you would need Il Merge.
+You can get it from nuget packages (https://www.nuget.org/packages/ilmerge) or from gihub (https://github.com/dotnet/ILMerge).
+
+I am using version 3.0.29 for .net 4.0
+
 
