@@ -19,7 +19,7 @@ C# development experience, basic knowledge about reverse engineering
 ## Game .dll
 
 Most .dll you would need located in game subfolder. Locate your game using Steam:
-![Game path in Steam](https://github.com/O-n-y/OxygenNotIncludedModTemplate/blob/main/oxy-mod-1.png)
+![Game path in Steam](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/oxy-mod-1.png)
 
 
 You path would look something like:
@@ -39,4 +39,4 @@ I am using version 3.0.29 for .net 4.0
 # Mod Template
 Let us start making our first mod (code will be available in this repository).
 To do so we create new project .net 4.0, C# Class Library .Net Framework
-
+![Project Type](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-create.png)
