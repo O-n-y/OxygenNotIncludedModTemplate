@@ -53,5 +53,33 @@ Once project created, we adding refferences to minimum count of .dll we could ne
 
 All other we could add later as we need those.
 
-Now we can add Loader - class which will be loaded first once our mod consumed by the Game.
+Now we can add Loader (https://github.com/O-n-y/OxygenNotIncludedModTemplate/blob/9a0c54d6cd5d7fee3c8735420ec8ea1bcb134fba/ModsGuide/ModTemplate/Loader.cs) - class which will be loaded first once our mod consumed by the Game.
 
+```csharp
+using System;
+using System.Reflection;
+using Harmony;
+using UnityEngine;
+
+namespace OxygenNotIncluded.Mods.ModTemplate
+{
+	public static class Loader
+	{
+		public static AssemblyName AssemblyName => Assembly.GetExecutingAssembly().GetName();
+		public static Version Version => AssemblyName.Version;
+		public static string Name => AssemblyName.Name;
+		
+		
+		public static void OnLoad()
+		{
+
+			// Called before any other mod functions (including patches), when Mod is loaded by the Game
+			Console.WriteLine($"Mod <{Name}> loaded: {Version}");
+		}
+	}
+}
+
+```
+
+We can compile and copy our first mod to the game folder, so it could be loaded.
+To do so, copy mod into /mods/Dev/ModTemplate folder of the game:
