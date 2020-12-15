@@ -38,5 +38,19 @@ I am using version 3.0.29 for .net 4.0
 
 # Mod Template
 Let us start making our first mod (code will be available in this repository).
-To do so we create new project .net 4.0, C# Class Library .Net Framework
+
+To do so we create new project **.Net 4.0, C# Class Library .Net Framework**:
+
 ![Project Type](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-create.png)
+
+Once project created, we adding refferences to minimum count of .dll we could need:
+1. 0Harmony.dll
+2. Assembly-CSharp.dll
+3. Assembly-CSharp-firstpass.dll
+4. UnityEngine.dll
+
+![References](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-references.png)
+
+All other we could add later as we need those.
+
+
