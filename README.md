@@ -37,7 +37,7 @@ I am using version 3.0.29 for .net 4.0
 
 
 # Mod Template
-Let us start making our first mod (code will be available in this repository).
+Let us start making our first mod (code will be available in this repository: https://github.com/O-n-y/OxygenNotIncludedModTemplate/tree/main/ModsGuide/ModTemplate).
 
 To do so we create new project **.Net 4.0, C# Class Library .Net Framework**:
 
@@ -53,4 +53,5 @@ Once project created, we adding refferences to minimum count of .dll we could ne
 
 All other we could add later as we need those.
 
+Now we can add Loader - class which will be loaded first once our mod consumed by the Game.
 
