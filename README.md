@@ -98,4 +98,4 @@ For this we can use one of my mod, made to help debugging:
 
 Once it activate, we can see our mod information printed:
 ![Mod Loaded](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-load.png)
-This mean we are in the game! We are not doing anything yet, but thats a start! ;)
+This mean we are in the game! We are not doing anything yet, but thats a start! ;-)
