@@ -36,3 +36,7 @@ You can get it from nuget packages (https://www.nuget.org/packages/ilmerge) or f
 I am using version 3.0.29 for .net 4.0
 
 
+# Mod Template
+Let us start making our first mod (code will be available in this repository).
+To do so we create new project .net 4.0, C# Class Library .Net Framework
+
