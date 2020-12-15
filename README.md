@@ -53,4 +53,5 @@ Once project created, we adding refferences to minimum count of .dll we could ne
 
 All other we could add later as we need those.
 
+Now we can add Loader - class which will be loaded first once our mod consumed by the Game.
 
