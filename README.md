@@ -82,4 +82,21 @@ namespace OxygenNotIncluded.Mods.ModTemplate
 ```
 
 We can compile and copy our first mod to the game folder, so it could be loaded.
-To do so, copy mod into /mods/Dev/ModTemplate folder of the game:
+To do so, copy mod into **%USERPROFILE%\Documents\Klei\OxygenNotIncluded\mods\Dev\ModTemplate** folder of the game (create it, if not exist yet):
+![Dev folder](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-mod-dev-folder.png)
+
+
+Now we can start the Game, open mods list and we shall see our new mod not activated. 
+Activate it by checking it in mods list, then restart the game. 
+
+Our mod now loaded into the game. 
+
+**But how we know it really did?**
+
+For this we can use one of my mod, made to help debugging: 
+
+**Debug Console** https://steamcommunity.com/sharedfiles/filedetails/?id=2041219184
+
+Once it activate, we can see our mod information printed:
+![Mod Loaded](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-load.png)
+This mean we are in the game! We are not doing anything yet, but thats a start! ;-)
