@@ -112,3 +112,26 @@ https://docs.microsoft.com/visualstudio/ide/how-to-create-project-templates?view
 
 Now let us create new project using our template:
 ![Create Project](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/project-template.png)
+
+We will name it **ManualGeneratorAdvanced** as goal of this mod will be to change energy output for Manual Generator from 400W to 600W.
+
+To do this we need to patch existing class **ManualGeneratorConfig**
+![ManualGeneratorConfig](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/ManualGenerator-Config.png)
+
+And change value of *GeneratorWattageRating* from 400 to 600.
+
+For convinience let us create Patches folder and *ManualGeneratorConfig_CreateBuildingDef* class inside
+
+```cs
+	[HarmonyPatch(typeof(ManualGeneratorConfig), "CreateBuildingDef")]
+	class ManualGeneratorConfig_CreateBuildingDef
+	{
+		public static void Postfix(BuildingDef __result)
+		{
+			__result.GeneratorWattageRating = 600f;
+		}
+	}
+```
+Now if we compile and put out **ManualGeneratorAdvanced.dll** into /Dev folder of the /mods, restart the game and activate the mod - we will see that our Manual Generators now produce 600W energy instead of 400W. As easy as that we just made our first mod!
+
+![ManualGeneratorScreenshot](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/ManualGenerator-Screenshot.png)
