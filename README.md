@@ -110,4 +110,5 @@ For it to be easer for us in future, we will use Project Template for Visual Stu
 If you not sure how to install VS Project Templates, checkout information from docs:
 https://docs.microsoft.com/visualstudio/ide/how-to-create-project-templates?view=vs-2019
 
-
+Now let us create new project using our template:
+![Create Project](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/project-template.png)
