@@ -82,7 +82,7 @@ namespace OxygenNotIncluded.Mods.ModTemplate
 ```
 
 We can compile and copy our first mod to the game folder, so it could be loaded.
-To do so, copy mod into %USERPROFILE%\Documents\Klei\OxygenNotIncluded\mods\Dev\ModTemplate folder of the game (create it, if not exist yet):
+To do so, copy mod into **%USERPROFILE%\Documents\Klei\OxygenNotIncluded\mods\Dev\ModTemplate** folder of the game (create it, if not exist yet):
 ![Dev folder](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/modtemplate-mod-dev-folder.png)
 
 
