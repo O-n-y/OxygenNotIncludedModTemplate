@@ -139,4 +139,8 @@ Now if we compile and put out **ManualGeneratorAdvanced.dll** into /Dev folder o
 ##  How we do so?
 At this point i assume you already read about Harmony and how it works. 
 
-So we added a Postfix method, which will be consumed by Harmony and executed after original method body execution, we were also needed to change value of *GeneratorWattageRating*, so we provided special variable `__result` (which contains result data after original method was executed) as an argument to the function and then changed value we needed.  Thats it, after this game will have updated data for the Manual Generator building.
+So we added a **Postfix** method, which will be consumed by Harmony and *executed after original method body execution*, 
+
+we were also needed to change value of *GeneratorWattageRating*, so we provided **special variable** `__result` (which contains result data after original method was executed) as an argument to the function and then changed value we needed.  
+
+Thats it, after this game will have updated data for the Manual Generator building.
