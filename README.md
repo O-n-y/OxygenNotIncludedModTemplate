@@ -112,3 +112,43 @@ https://docs.microsoft.com/visualstudio/ide/how-to-create-project-templates?view
 
 Now let us create new project using our template:
 ![Create Project](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/project-template.png)
+
+We will name it **ManualGeneratorAdvanced** as goal of this mod will be to change energy output for Manual Generator from 400W to 600W.
+
+To do this we need to patch existing class **ManualGeneratorConfig**
+![ManualGeneratorConfig](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/ManualGenerator-Config.png)
+
+And change value of *GeneratorWattageRating* from 400 to 600.
+
+For convinience let us create Patches folder and *ManualGeneratorConfig_CreateBuildingDef* class inside
+
+```cs
+	[HarmonyPatch(typeof(ManualGeneratorConfig), "CreateBuildingDef")]
+	class ManualGeneratorConfig_CreateBuildingDef
+	{
+		public static void Postfix(BuildingDef __result)
+		{
+			__result.GeneratorWattageRating = 600f;
+		}
+	}
+```
+Now if we compile and put out **ManualGeneratorAdvanced.dll** into /Dev folder of the /mods, restart the game and activate the mod - we will see that our Manual Generators now produce 600W energy instead of 400W. As easy as that we just made our first mod!
+
+![ManualGeneratorScreenshot](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/ManualGenerator-Screenshot.png)
+
+##  How we do so?
+At this point i assume you already read about Harmony and how it works. 
+
+So we added a **Postfix** method, which will be consumed by Harmony and *executed after original method body execution*, 
+
+we were also needed to change value of *GeneratorWattageRating*, so we provided **special variable** `__result` (which contains result data after original method was executed) as an argument to the function and then changed value we needed.  
+
+Thats it, after this game will have updated data for the Manual Generator building.
+
+## Shared Libriaries
+
+Now as we start creating mods, we certainly will have some code, which will be needed in many of our mods, and creating duplicates is a very bad idea as it will lead to more errors in the future and hard maintenancement of the code in general.
+
+Earliar we had added Il Merge for the purpose of adding external libraries, let us use it now to add first external library - our shared library, which will have all the common code for our mods.
+
+The lib itself will be located in this repository: https://github.com/O-n-y/Ony.OxygenNotIncluded.Lib
