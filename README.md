@@ -144,3 +144,9 @@ So we added a **Postfix** method, which will be consumed by Harmony and *execute
 we were also needed to change value of *GeneratorWattageRating*, so we provided **special variable** `__result` (which contains result data after original method was executed) as an argument to the function and then changed value we needed.  
 
 Thats it, after this game will have updated data for the Manual Generator building.
+
+## Shared Libriaries
+
+Now as we start creating mods, we certainly will have some code, which will be needed in many of our mods, and creating duplicates is a very bad idea as it will lead to more errors in the future and hard maintenancement of the code in general.
+
+Earliar we had added Il Merge for the purpose of adding external libraries, let us use it now to add first external library - our shared library, which will have all the common code for our mods.
