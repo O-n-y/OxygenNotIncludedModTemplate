@@ -150,3 +150,5 @@ Thats it, after this game will have updated data for the Manual Generator buildi
 Now as we start creating mods, we certainly will have some code, which will be needed in many of our mods, and creating duplicates is a very bad idea as it will lead to more errors in the future and hard maintenancement of the code in general.
 
 Earliar we had added Il Merge for the purpose of adding external libraries, let us use it now to add first external library - our shared library, which will have all the common code for our mods.
+
+The lib itself will be located in this repository: https://github.com/O-n-y/Ony.OxygenNotIncluded.Lib
