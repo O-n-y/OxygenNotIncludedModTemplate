@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModTemplate", "ModTemplate\ModTemplate.csproj", "{BB7B47BB-2230-42B1-B7D8-0BA6930E9C93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualGeneratorAdvanced", "ManualGeneratorAdvanced\ManualGeneratorAdvanced.csproj", "{54C951AB-B81E-4BB5-9B9C-012771D1D283}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{649FD339-4A6C-4D9F-B3C8-36D6C64B9BBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{19CBA1CE-0D3F-47CE-BC3D-3EAC406A7DFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,16 @@ Global
 		{BB7B47BB-2230-42B1-B7D8-0BA6930E9C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB7B47BB-2230-42B1-B7D8-0BA6930E9C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB7B47BB-2230-42B1-B7D8-0BA6930E9C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C951AB-B81E-4BB5-9B9C-012771D1D283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C951AB-B81E-4BB5-9B9C-012771D1D283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C951AB-B81E-4BB5-9B9C-012771D1D283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C951AB-B81E-4BB5-9B9C-012771D1D283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB7B47BB-2230-42B1-B7D8-0BA6930E9C93} = {19CBA1CE-0D3F-47CE-BC3D-3EAC406A7DFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5BA0744-BBA4-4D0D-8059-B0DE10BC4754}
