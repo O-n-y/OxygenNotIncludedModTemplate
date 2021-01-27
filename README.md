@@ -151,4 +151,58 @@ Now as we start creating mods, we certainly will have some code, which will be n
 
 Earliar we had added Il Merge for the purpose of adding external libraries, let us use it now to add first external library - our shared library, which will have all the common code for our mods.
 
-The lib itself will be located in this repository: https://github.com/O-n-y/Ony.OxygenNotIncluded.Lib
+As a start, let us add new Class Library (.Net Framework) project to our solution, call it **SharedLib** and add it as a refference to our ModTemplate.
+
+Then we move our loader there with a few changes:
+```
+using System;
+using System.Reflection;
+
+namespace OxygenNotIncluded.Mods.SharedLib
+{
+	public class LoaderBase
+	{
+		public static AssemblyName AssemblyName => Assembly.GetExecutingAssembly().GetName();
+		public static Version Version => AssemblyName.Version;
+		public static string Name => AssemblyName.Name;
+		
+		
+		public static void OnLoad()
+		{
+
+			// Called before any other mod functions (including patches), when Mod is loaded by the Game
+			Console.WriteLine($"Mod <{Name}> loaded: {Version}");
+		}
+	}
+}
+```
+Now in **ModTemplate** project we can change our Loader class:
+```
+using System;
+using System.Reflection;
+using Harmony;
+using OxygenNotIncluded.Mods.SharedLib;
+using UnityEngine;
+
+namespace OxygenNotIncluded.Mods.ModTemplate
+{
+	public class Loader : LoaderBase
+	{
+	}
+}
+
+```
+For shared library to be compiled as part of our Mod .dll we need to add changes to .csproj file for it (add it after **PrepareForBuild** Target containing ILMerge check):
+```
+   <Target Name="AfterBuild">
+    <!-- the ILMergePath property points to the location of ILMerge.exe console application -->
+    <Exec Command="$(ILMergeConsolePath) /targetplatform:v4,&quot;%ProgramFiles%\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&quot; /out:$(Configuration).Mod.$(TargetFileName)  $(TargetDir)$(TargetFileName) $(TargetDir)SharedLib.dll" />
+  </Target>
+  ....
+</Project>
+```
+Now after compile our library will have it inside:
+
+
+I also will be providing library for mod developers located in this repository: https://github.com/O-n-y/Ony.OxygenNotIncluded.Lib 
+(it will be published with extensions over time)
