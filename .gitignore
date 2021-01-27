@@ -1,0 +1,7 @@
+packages
+bin
+obj
+/ModsGuide/ModTemplate/obj/Debug
+/ModsGuide/ModTemplate/obj/Debug/ModTemplate.csproj.FileListAbsolute.txt
+/.tgitconfig
+/ModsGuide/.vs/ModsGuide/v16/.suo

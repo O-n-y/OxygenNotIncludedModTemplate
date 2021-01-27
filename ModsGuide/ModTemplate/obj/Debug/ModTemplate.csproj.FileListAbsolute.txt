@@ -68,3 +68,7 @@ D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate
 D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\obj\Debug\ModTemplate.csproj.CopyComplete
 D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\obj\Debug\ModTemplate.dll
 D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\obj\Debug\ModTemplate.pdb
+D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\bin\Debug\SharedLib.dll
+D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\bin\Debug\LibNoiseDotNet.dll
+D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\bin\Debug\SharedLib.pdb
+D:\C#\OxygenNotIncluded\Guide\OxygenNotIncludedModTemplate\ModsGuide\ModTemplate\obj\Debug\ModTemplate.csprojAssemblyReference.cache
