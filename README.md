@@ -206,3 +206,6 @@ Now after compile our library will have it inside:
 
 I also will be providing library for mod developers located in this repository: https://github.com/O-n-y/Ony.OxygenNotIncluded.Lib 
 (it will be published with extensions over time)
+
+![Loader](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/shared-loader.png)
+
