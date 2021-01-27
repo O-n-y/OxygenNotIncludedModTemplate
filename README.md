@@ -122,7 +122,7 @@ And change value of *GeneratorWattageRating* from 400 to 600.
 
 For convinience let us create Patches folder and *ManualGeneratorConfig_CreateBuildingDef* class inside
 
-```cs
+```csharp
 	[HarmonyPatch(typeof(ManualGeneratorConfig), "CreateBuildingDef")]
 	class ManualGeneratorConfig_CreateBuildingDef
 	{
@@ -154,7 +154,7 @@ Earliar we had added Il Merge for the purpose of adding external libraries, let 
 As a start, let us add new Class Library (.Net Framework) project to our solution, call it **SharedLib** and add it as a refference to our ModTemplate.
 
 Then we move our loader there with a few changes:
-```
+```csharp
 using System;
 using System.Reflection;
 
@@ -177,7 +177,7 @@ namespace OxygenNotIncluded.Mods.SharedLib
 }
 ```
 Now in **ModTemplate** project we can change our Loader class:
-```
+```csharp
 using System;
 using System.Reflection;
 using Harmony;
@@ -193,7 +193,7 @@ namespace OxygenNotIncluded.Mods.ModTemplate
 
 ```
 For shared library to be compiled as part of our Mod .dll we need to add changes to .csproj file for it (add it after **PrepareForBuild** Target containing ILMerge check):
-```
+```xml
    <Target Name="AfterBuild">
     <!-- the ILMergePath property points to the location of ILMerge.exe console application -->
     <Exec Command="$(ILMergeConsolePath) /targetplatform:v4,&quot;%ProgramFiles%\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&quot; /out:$(Configuration).Mod.$(TargetFileName)  $(TargetDir)$(TargetFileName) $(TargetDir)SharedLib.dll" />
