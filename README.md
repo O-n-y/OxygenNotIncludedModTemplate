@@ -201,6 +201,8 @@ For shared library to be compiled as part of our Mod .dll we need to add changes
   ....
 </Project>
 ```
+p.s. If for some reason your path to .NET is not the same, you would need to make according to changes to it.
+
 Now after compile our library will have it inside:
 
 
