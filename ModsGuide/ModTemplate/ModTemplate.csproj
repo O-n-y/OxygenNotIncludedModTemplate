@@ -44,7 +44,11 @@
       <HintPath>E:\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +63,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="mod_info.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +81,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.29\build\ILMerge.props'))" />
   </Target>
-    <Target Name="AfterBuild">
+  <Target Name="AfterBuild">
     <!-- the ILMergePath property points to the location of ILMerge.exe console application -->
     <Exec Command="$(ILMergeConsolePath) /targetplatform:v4,&quot;%ProgramFiles%\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&quot; /out:$(Configuration).Mod.$(TargetFileName)  $(TargetDir)$(TargetFileName) $(TargetDir)SharedLib.dll" />
   </Target>
