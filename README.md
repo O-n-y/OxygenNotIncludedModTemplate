@@ -211,3 +211,31 @@ I also will be providing library for mod developers located in this repository: 
 
 ![Loader](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/shared-loader.png)
 
+## Supporting DLC
+Official Information for both DLC and VANILLA versions of the mod located in Klei forum (https://forums.kleientertainment.com/forums/topic/126022-setting-up-mod_infoyaml/)
+
+For the mod to be loaded correctly in DLC version of the game, we need to add *mod_info.yaml* file to the mod directoy. 
+We will assume main verion of the mod will be DLC:
+
+```xml
+supportedContent: EXPANSION1_ID
+lastWorkingBuild: 449549
+```
+
+## Then if we want to support both DLC and Base (Vanilla) version of the game:
+
+**Case 1.** If out mod support both versions of the game without need to have changes in code:
+
+```xml
+supportedContent: VANILLA_ID,EXPANSION1_ID
+lastWorkingBuild: 449549
+```
+
+**Case 2.** Now if out mod need additional version to support vanilla, we need to add subfolder **archived_versions** and there subfolder which will contain particular version of the mod, i suggest to name it like this: **_GAME_TYPE__GAME_BUILD_**. For example: vanilla_449460.
+Put in this subfolder .dll of the mod and  *mod_info.yaml* :
+
+```xml
+supportedContent: VANILLA_ID
+lastWorkingBuild: 449460
+```
+
