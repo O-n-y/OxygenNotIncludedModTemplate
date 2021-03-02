@@ -2,6 +2,8 @@ This project is meant to help you start creating mods for the game Oxygen Not In
 
 It will provide basic needed information and examples of some mods.
 
+*All information is given assuming you are running Windows*, for Mac and Linux paths and some other technical informatiom may differ.
+
 # Requirements:
 
 C# development experience, basic knowledge about reverse engineering
