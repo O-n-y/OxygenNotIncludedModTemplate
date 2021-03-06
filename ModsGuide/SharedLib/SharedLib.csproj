@@ -53,6 +53,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ony.OxygenNotIncluded.Lib\Ony.OxygenNotIncluded.Lib\Ony.OxygenNotIncluded.Lib.csproj">
+      <Project>{2070F6DF-EDED-4FDC-B4E3-76096FE939B4}</Project>
+      <Name>Ony.OxygenNotIncluded.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

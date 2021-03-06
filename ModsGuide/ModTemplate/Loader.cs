@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace OxygenNotIncluded.Mods.ModTemplate
 {
-	public class Loader : LoaderBase
+	public class Loader : LoaderBase<TranslationMod>
 	{
 	}
 }

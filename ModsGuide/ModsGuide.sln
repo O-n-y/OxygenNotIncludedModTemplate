@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{19
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib", "SharedLib\SharedLib.csproj", "{A4B39206-E631-4802-8B4A-0121154FB239}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ony.OxygenNotIncluded.Lib", "Ony.OxygenNotIncluded.Lib\Ony.OxygenNotIncluded.Lib\Ony.OxygenNotIncluded.Lib.csproj", "{2070F6DF-EDED-4FDC-B4E3-76096FE939B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{A4B39206-E631-4802-8B4A-0121154FB239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A4B39206-E631-4802-8B4A-0121154FB239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4B39206-E631-4802-8B4A-0121154FB239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2070F6DF-EDED-4FDC-B4E3-76096FE939B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2070F6DF-EDED-4FDC-B4E3-76096FE939B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2070F6DF-EDED-4FDC-B4E3-76096FE939B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2070F6DF-EDED-4FDC-B4E3-76096FE939B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BB7B47BB-2230-42B1-B7D8-0BA6930E9C93} = {19CBA1CE-0D3F-47CE-BC3D-3EAC406A7DFC}
 		{A4B39206-E631-4802-8B4A-0121154FB239} = {649FD339-4A6C-4D9F-B3C8-36D6C64B9BBD}
+		{2070F6DF-EDED-4FDC-B4E3-76096FE939B4} = {649FD339-4A6C-4D9F-B3C8-36D6C64B9BBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5BA0744-BBA4-4D0D-8059-B0DE10BC4754}

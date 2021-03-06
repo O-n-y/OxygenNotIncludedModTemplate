@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Loader.cs" />
+    <Compile Include="Localization\ModTranslation.cs" />
+    <Compile Include="Localization\TranslationEn.cs" />
+    <Compile Include="Localization\TranslationRu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,11 +72,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ony.OxygenNotIncluded.Lib\Ony.OxygenNotIncluded.Lib\Ony.OxygenNotIncluded.Lib.csproj">
+      <Project>{2070f6df-eded-4fdc-b4e3-76096fe939b4}</Project>
+      <Name>Ony.OxygenNotIncluded.Lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharedLib\SharedLib.csproj">
       <Project>{a4b39206-e631-4802-8b4a-0121154fb239}</Project>
       <Name>SharedLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
