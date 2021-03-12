@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Loader.cs" />
-    <Compile Include="Localization\ModTranslation.cs" />
+    <Compile Include="Localization\TranslationMod.cs" />
     <Compile Include="Localization\TranslationEn.cs" />
     <Compile Include="Localization\TranslationRu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +91,6 @@
   </Target>
   <Target Name="AfterBuild">
     <!-- the ILMergePath property points to the location of ILMerge.exe console application -->
-    <Exec Command="$(ILMergeConsolePath) /targetplatform:v4,&quot;%ProgramFiles%\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&quot; /out:$(Configuration).Mod.$(TargetFileName)  $(TargetDir)$(TargetFileName) $(TargetDir)SharedLib.dll" />
+    <Exec Command="$(ILMergeConsolePath) /targetplatform:v4,&quot;%ProgramFiles%\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&quot; /out:$(Configuration).Mod.$(TargetFileName)  $(TargetDir)$(TargetFileName) $(TargetDir)SharedLib.dll $(TargetDir)Ony.OxygenNotIncluded.Lib.dll" />
   </Target>
 </Project>

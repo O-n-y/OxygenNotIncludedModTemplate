@@ -4,7 +4,7 @@ namespace OxygenNotIncluded.Mods.ManualGeneratorAdvanced
 {
 	public class TranslationMod : TranslationBase
 	{
-		public virtual LocalizeText LoadingInfo => LanguageSelection<TranslationMod>.Get().LoadingInfo;
+		public virtual LocalizeText CreateBuildingDef => LanguageSelection<TranslationMod>.Get().CreateBuildingDef;
 
 	}
 }
