@@ -249,14 +249,14 @@ To add it we should add refference to it and change our .proj file with ILMerge 
 And replace our loader with a new one:
 
 ```cs
-	public class Engine : StartUp<Engine, TranslationMod> { }
-	public static class Loader
+public class Engine : StartUp<Engine, TranslationMod> { }
+public static class Loader
+{
+	public static void OnLoad()
 	{
-		public static void OnLoad()
-		{
-			Engine.Start();
-		}
+		Engine.Start();
 	}
+}
 ```
 Here as you can see **TranslationMod** - our localization module, we will about it in a bit.
 
