@@ -291,16 +291,16 @@ public class TranslationRu : TranslationMod
 ```
 Now to confirm it is working, let us output **CreateBuildingDef** property value after appling out patch:
 ```cs
-	[HarmonyPatch(typeof(ManualGeneratorConfig), "CreateBuildingDef")]
-	class ManualGeneratorConfig_CreateBuildingDef
+[HarmonyPatch(typeof(ManualGeneratorConfig), "CreateBuildingDef")]
+class ManualGeneratorConfig_CreateBuildingDef
+{
+	public static void Postfix(BuildingDef __result)
 	{
-		public static void Postfix(BuildingDef __result)
-		{
-			__result.GeneratorWattageRating = 600f;
-			// localization test
-			Engine.Print(Engine.Localization.CreateBuildingDef.NAME);
-		}
+		__result.GeneratorWattageRating = 600f;
+		// localization test
+		Engine.Print(Engine.Localization.CreateBuildingDef.NAME);
 	}
+}
 ```
 
 After re-compile we can ensure it is indeed outputing this in proper language in console:
