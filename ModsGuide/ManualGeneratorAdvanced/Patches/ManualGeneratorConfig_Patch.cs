@@ -1,4 +1,5 @@
 ﻿using Harmony;
+using static Ony.OxygenNotIncluded.Lib.Logger;
 
 namespace OxygenNotIncluded.Mods.ManualGeneratorAdvanced
 {
@@ -8,8 +9,8 @@ namespace OxygenNotIncluded.Mods.ManualGeneratorAdvanced
 		public static void Postfix(BuildingDef __result)
 		{
 			__result.GeneratorWattageRating = 600f;
+			Engine.Print(Engine.Localization.CreateBuildingDef.NAME);
 
-		//	Header(Loader.Localization.CreateBuildingDef.NAME);
 		}
 	}
 }
