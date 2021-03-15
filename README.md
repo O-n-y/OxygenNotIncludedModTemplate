@@ -262,3 +262,54 @@ Here as you can see **TranslationMod** - our localization module, we will about 
 
 Engine will handle startup, logger initialization, localization and more.
 
+## Adding Localization
+
+We will use Localization Engine from recently added **Ony.OxygenNotIncluded.Lib** (OOL), to do so, let's create /Localization subfolder and a few classes in it:
+
+*Localization base class*:
+```cs
+public class TranslationMod : TranslationBase
+{
+	public virtual LocalizeText CreateBuildingDef => LanguageSelection<TranslationMod>.Get().CreateBuildingDef;
+}
+```
+*For **English** localization test:*
+```cs
+[Translation(Language = Localization.Language.Unspecified)]
+public class TranslationEn : TranslationMod
+{
+	public override LocalizeText CreateBuildingDef => new LocalizeText( "Loading patch for CreateBuildingDef -> set output to 600", "");
+}
+```
+*For **Russian** localization test:*
+```cs
+[Translation(Language = Localization.Language.Russian)]
+public class TranslationRu : TranslationMod
+{
+	public override LocalizeText CreateBuildingDef => new LocalizeText( "Загрузка патча для CreateBuildingDef -> установка вывода мощности на 600", "");
+}
+```
+Now to confirm it is working, let us output **CreateBuildingDef** property value after appling out patch:
+```cs
+[HarmonyPatch(typeof(ManualGeneratorConfig), "CreateBuildingDef")]
+class ManualGeneratorConfig_CreateBuildingDef
+{
+	public static void Postfix(BuildingDef __result)
+	{
+		__result.GeneratorWattageRating = 600f;
+		// localization test
+		Engine.Print(Engine.Localization.CreateBuildingDef.NAME);
+	}
+}
+```
+
+After re-compile we can ensure it is indeed outputing this in proper language in console:
+
+When game running in English language:
+![English localization test](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/localizationtest-english.png)
+
+
+After we have switched to Russian localization:
+![Russian localization test](https://raw.githubusercontent.com/O-n-y/OxygenNotIncludedModTemplate/main/Images/localizationtest-russian.png)
+
+P.S. to have this console, install my other mod **Debug Console** (https://steamcommunity.com/sharedfiles/filedetails/?id=2041219184)
