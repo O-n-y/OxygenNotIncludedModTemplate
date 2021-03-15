@@ -241,3 +241,24 @@ supportedContent: VANILLA_ID
 lastWorkingBuild: 449460
 ```
 
+## Adding Engine
+To do so we will used my *Ony.OxygenNotIncluded.Lib* library (https://github.com/O-n-y/Ony.OxygenNotIncluded.Lib), overtime it will grow and will have more useful tools, we could use.
+
+To add it we should add refference to it and change our .proj file with ILMerge rule, as we done before.
+
+And replace our loader with a new one:
+
+```cs
+public class Engine : StartUp<Engine, TranslationMod> { }
+public static class Loader
+{
+	public static void OnLoad()
+	{
+		Engine.Start();
+	}
+}
+```
+Here as you can see **TranslationMod** - our localization module, we will about it in a bit.
+
+Engine will handle startup, logger initialization, localization and more.
+
