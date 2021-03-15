@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Reflection;
 using Harmony;
-using OxygenNotIncluded.Mods.SharedLib;
+using Ony.OxygenNotIncluded.Lib;
 using UnityEngine;
 
 namespace OxygenNotIncluded.Mods.ModTemplate
 {
-	public class Loader : LoaderBase<Loader, TranslationMod>
+	public class Engine : StartUp<Engine, TranslationMod> { }
+	public static class Loader
 	{
-		public void Initialization()
+		public static void OnLoad()
 		{
-			// if something need to be initialized at load
+			Engine.Start();
 		}
 	}
 }
